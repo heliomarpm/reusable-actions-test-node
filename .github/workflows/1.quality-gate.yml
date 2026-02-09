@@ -4,7 +4,7 @@ description: "Automated CI for the demo-cicd-node project"
 on:
   workflow_dispatch:
   push:
-    branches: [develop, feature**, feat**. fix**]
+    branches: [develop, feature**, feat**. hotfix**, fix**]
   # pull_request:
   #   branches: [develop, main]
 
