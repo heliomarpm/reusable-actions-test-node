@@ -1,4 +1,4 @@
-name: "2. Create/Update PR"
+name: "2. Pull Request"
 description: "Automatically create a pull request when the CI workflow succeeds and the head branch is not 'main'"
 
 on:
@@ -19,7 +19,7 @@ jobs:
         && github.event.workflow_run.head_branch != 'main'
       }}
 
-    uses: heliomarpm/reusable-actions/.github/workflows/auto-pr.yml@main
+    uses: heliomarpm/reusable-actions/.github/workflows/cd-pull-request.yml@main
     with:
       min-coverage: 85
       coverage-mode: info

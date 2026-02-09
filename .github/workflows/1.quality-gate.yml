@@ -1,4 +1,4 @@
-name: "1. CI"
+name: "1. Quality Assurance"
 description: "Automated CI for the demo-cicd-node project"
 
 on:
@@ -10,4 +10,4 @@ on:
 
 jobs:
   ci:
-    uses: heliomarpm/reusable-actions/.github/workflows/ci.yml@main
+    uses: heliomarpm/reusable-actions/.github/workflows/ci-quality-gate.yml@main
