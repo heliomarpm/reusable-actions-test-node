@@ -3,7 +3,7 @@ description: "Automatically create a pull request when the CI workflow succeeds 
 
 on:
   workflow_run:
-    workflows: ["1. CI"]
+    workflows: ["1. Quality Assurance"]
     types:
       - completed
   # push:
