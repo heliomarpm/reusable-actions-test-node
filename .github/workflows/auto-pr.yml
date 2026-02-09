@@ -1,0 +1,27 @@
+name: "2. Create/Update PR"
+description: "Automatically create a pull request when the CI workflow succeeds and the head branch is not 'main'"
+
+on:
+  workflow_run:
+    workflows: ["1. CI"]
+    types:
+      - completed
+  # push:
+  #   branches:
+  #     - feature/**
+  #     - develop
+      
+jobs:
+  auto-pr:
+    if: >
+      ${{
+        github.event.workflow_run.conclusion == 'success'
+        && github.event.workflow_run.head_branch != 'main'
+      }}
+
+    uses: heliomarpm/reusable-actions/.github/workflows/auto-pr.yml@main
+    with:
+      min-coverage: 85
+      coverage-mode: info
+    secrets:
+      GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}

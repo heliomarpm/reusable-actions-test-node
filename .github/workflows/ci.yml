@@ -1,0 +1,13 @@
+name: "1. CI"
+description: "Automated CI for the demo-cicd-node project"
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [develop, feature/**]
+  # pull_request:
+  #   branches: [develop, main]
+
+jobs:
+  ci:
+    uses: heliomarpm/reusable-actions/.github/workflows/ci.yml@main
