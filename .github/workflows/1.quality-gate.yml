@@ -11,5 +11,5 @@ on:
 jobs:
   app:
     uses: heliomarpm/reusable-actions/.github/workflows/ci-quality-gate.yml@main
-    # with:
-    #   project_path: app
+    with:
+      project_path: app
