@@ -6,7 +6,7 @@ on:
       - main
 
 jobs:
-  release:
+  app:
     uses: heliomarpm/reusable-actions/.github/workflows/cd-release.yml@main
     secrets:
       GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}    
