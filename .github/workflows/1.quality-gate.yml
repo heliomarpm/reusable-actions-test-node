@@ -13,3 +13,5 @@ jobs:
     uses: heliomarpm/reusable-actions/.github/workflows/ci-quality-gate.yml@main
     with:
       project-path: app
+      coverage-min: 85
+      coverage-mode: info
