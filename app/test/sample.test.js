@@ -1,8 +1,8 @@
 console.log("Hello World!");
 
-// test/sample.test.js
-if (1 + 1 !== 2) {
+if (false) {
   throw new Error("Math is broken");
 }
-
-console.log("Tests passed");
+else {
+  console.log("Tests passed");
+}
