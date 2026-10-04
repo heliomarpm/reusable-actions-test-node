@@ -11,7 +11,8 @@ jobs:
     uses: heliomarpm/reusable-actions/.github/workflows/cd-release.yml@main
     secrets:
       GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}    
-    # with:
+    with:
+      project-path: 'app'
     #   release_strategy: "release-branch"
     #   semantic_release_debug_mode: true
     #   semantic_release_dry_run: false
