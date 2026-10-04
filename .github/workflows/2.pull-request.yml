@@ -22,6 +22,7 @@ jobs:
     uses: heliomarpm/reusable-actions/.github/workflows/cd-pull-request.yml@main
     with:
       project-path: 'app'
+      strategy: 'gitflow'
     #   coverage-min: 85
     #   coverage-mode: info
     secrets:
