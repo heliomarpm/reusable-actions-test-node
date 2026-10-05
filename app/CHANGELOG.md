@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file.
 
+# [1.1.0](https://github.com/heliomarpm/reusable-actions-test-node/compare/v1.0.0...v1.1.0) (2026-10-05)
+
+
+### Features
+
+* **app:** ✨ adicionar função de soma ([1900e4e](https://github.com/heliomarpm/reusable-actions-test-node/commit/1900e4ea6e969f2ccf934d3801a29eb98ec3b7d6))
+* **math:** ✨ adicionar função de subtração ([700e5b2](https://github.com/heliomarpm/reusable-actions-test-node/commit/700e5b23d1c71fef4b27ce5afc8a87a6a99141ce))
+
 # 1.0.0 (2026-10-04)
 
 
