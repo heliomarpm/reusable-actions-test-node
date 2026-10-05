@@ -6,4 +6,8 @@ function soma(x, y) {
     console.log(x + y); 
 }
 
+function subtracao(x, y) {
+    console.log(x - y);
+}
+
 main();
