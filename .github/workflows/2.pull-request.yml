@@ -1,5 +1,13 @@
 name: "2. Pull Request"
 description: "Automatically create a pull request when the CI workflow succeeds and the head branch is not 'main'"
+run-name: >-
+  🔀 Auto PR: (${{ github.event.workflow_run.head_branch || github.ref_name }} → ${{
+    startsWith(github.event.workflow_run.head_branch || github.ref_name, 'hotfix') && 'main' ||
+    (startsWith(github.event.workflow_run.head_branch || github.ref_name, 'release') && 'main' ||
+    ((github.event.workflow_run.head_branch == 'develop' || github.ref_name == 'develop') && 'release-*' || 'develop'))
+  }}): ${{ github.event.workflow_run.head_commit.message || 'Disparo manual' }}
+
+
 
 on:
   workflow_run:
