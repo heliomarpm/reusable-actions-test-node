@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+# [1.2.0](https://github.com/heliomarpm/reusable-actions-test-node/compare/v1.1.0...v1.2.0) (2026-10-06)
+
+
+### Features
+
+* add release promotion workflow using reusable cd-pull-request action ([5fd0e78](https://github.com/heliomarpm/reusable-actions-test-node/commit/5fd0e78edb213c9ad468e81484bc06473d20faec))
+
 # [1.1.0](https://github.com/heliomarpm/reusable-actions-test-node/compare/v1.0.0...v1.1.0) (2026-10-05)
 
 
