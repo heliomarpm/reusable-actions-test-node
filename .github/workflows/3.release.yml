@@ -2,6 +2,16 @@ name: "3. Release"
 
 on:
   workflow_dispatch:
+    inputs:
+      dry-run:
+        description: 'Modo Dry-Run (não publica)'
+        type: boolean
+        default: false
+      strict-mode:
+        description: 'Validar Conventional Commits rigorosamente'
+        type: boolean
+        default: true
+
   push:
     branches:
       - main
@@ -13,6 +23,8 @@ jobs:
       GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}    
     with:
       project-path: 'app'
+      semantic-release-dry-run: ${{ inputs.dry-run || false }}
+      strict-conventional-commits: ${{ inputs.strict-mode != false }}
     #   release_strategy: "release-branch"
     #   semantic_release_debug_mode: true
     #   semantic_release_dry_run: false
