@@ -4,9 +4,15 @@ description: "Automated CI for the demo-cicd-node project"
 on:
   workflow_dispatch:
   push:
-    branches: [develop, feature**, feat**. hotfix**, fix**]
+    branches: [develop, feature**, feat**. hotfix**, bugfix**, fix**]
   # pull_request:
   #   branches: [develop, main]
+
+# 💡 No consumidor: cancela execuções antigas em branches de feature,
+# mas permite que branches principais terminem normalmente:
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: ${{ github.ref != 'refs/heads/main' && github.ref != 'refs/heads/develop' }}  
 
 jobs:
   app:
