@@ -10,4 +10,8 @@ function subtracao(x, y) {
     console.log(x - y);
 }
 
+function multiplicacao(x, y) {
+    console.log(x * y);
+}
+
 main();
