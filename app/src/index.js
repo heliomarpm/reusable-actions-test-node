@@ -6,12 +6,12 @@ function soma(x, y) {
     console.log(x + y); 
 }
 
-function subtracao(x, y) {
-    console.log(x - y);
-}
-
 function multiplicacao(x, y) {
     console.log(x * y);
+}
+
+function divisao(x, y) {
+    console.log(x / y);
 }
 
 main();
