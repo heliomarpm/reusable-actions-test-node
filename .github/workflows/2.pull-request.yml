@@ -27,11 +27,9 @@ jobs:
         github.event.workflow_run.head_branch != 'main'
       }}
 
-    uses: heliomarpm/reusable-actions/.github/workflows/cd-pull-request.yml@main
+    uses: heliomarpm/reusable-workflows/.github/workflows/cd-pull-request.yml@main
     with:
       project-path: 'app'
       strategy: 'gitflow'
-    #   coverage-min: 85
-    #   coverage-mode: info
     secrets:
       GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}

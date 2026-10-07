@@ -10,7 +10,7 @@ on:
 
 jobs:
   app:
-    uses: heliomarpm/reusable-actions/.github/workflows/ci-quality-gate.yml@main
+    uses: heliomarpm/reusable-workflows/.github/workflows/ci-quality-gate.yml@main
     with:
       project-path: 'app'
       coverage-min: 85
