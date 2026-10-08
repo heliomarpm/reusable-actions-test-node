@@ -25,6 +25,7 @@ jobs:
       project-path: 'app'
       semantic-release-dry-run: ${{ inputs.dry-run || false }}
       strict-conventional-commits: ${{ inputs.strict-mode != false }}
+      skip-version-file: true
     #   release_strategy: "release-branch"
     #   semantic_release_debug_mode: true
     #   semantic_release_dry_run: false

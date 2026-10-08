@@ -31,5 +31,7 @@ jobs:
     with:
       project-path: 'app'
       strategy: 'gitflow'
+      coverage-min: 85
+      coverage-mode: 'info'
     secrets:
       GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
